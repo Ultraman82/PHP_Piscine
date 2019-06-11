@@ -1,0 +1,113 @@
+html {
+  background: url("https://images.theconversation.com/files/121885/original/image-20160510-20731-1pf8nwv.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip")
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  font-family: Arial;
+}
+
+.periodic {
+  position: relative;
+  height: 90vh;
+  margin: 4vh;
+  text-shadow: none;
+}
+
+.periodic-row {
+  clear: both;
+  height: 10%;
+}
+
+.cell {
+  float: left;
+  position: relative;
+  width: 5.55%;
+  height: 100%;
+}
+
+.element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 1px;
+  right: 1px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  text-align: center;
+  background-color: rgba(0, 128, 128, 0.95);
+}
+
+.at_num,
+.at_details {
+  position: absolute;
+  font-size: 0.4rem;
+}
+
+.at_details {
+  top: 4px;
+  text-align: right;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.at_num {
+  bottom: 4px;
+}
+
+.symbol {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  right: 0px;
+  margin-top: -4px;
+  font-size: vw;
+  line-height: 1;
+  height: 9px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.at_details {
+  bottom: 4px;
+  left: 0px;
+  right: 0px;
+}
+
+.cell:nth-child(-n + 2) .element,
+.cell:nth-child(n + 13) .element {
+  background-color: rgba(0, 160, 96, 0.95);
+}
+
+.cell:nth-child(1) .element,
+.periodic-row:nth-child(2) .cell:nth-child(n + 14) .element,
+.periodic-row:nth-child(3) .cell:nth-child(n + 15) .element,
+.periodic-row:nth-child(4) .cell:nth-child(n + 16) .element,
+.periodic-row:nth-child(5) .cell:nth-child(n + 17) .element {
+  background-color: rgba(0, 192, 64, 0.95);
+}
+
+.periodic-row:nth-child(-n + 6) .cell:nth-child(18) .element {
+  background-color: rgba(64, 192, 0, 0.95);
+}
+
+.periodic-row:nth-child(n + 9) .element {
+  background-color: rgba(0, 96, 160, 0.95);
+}
+#footer {
+  border-top: 0.1rem solid yellow;
+  padding-top: 3px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+  font-size: 1rem;
+  color: whitesmoke;
+  font-style: italic;
+  height: 4vh;
+  float: left;
+}

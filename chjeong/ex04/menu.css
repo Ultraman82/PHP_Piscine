@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+nav {
+  width: 100vw;
+  height: 50px;
+  line-height: 50px;
+  color: white;
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+}
+li {
+  list-style-type: none;
+  height: 50px;
+}
+.u0 {
+  text-align: center;
+  width: 20vw;
+  height: auto;
+}
+.n0 {
+  visibility: hidden;
+  color: white;
+  background-color: darkgrey;
+}
+.u0:hover .n0 {
+  visibility: visible;
+}
+.u0:hover .n0:hover {
+  cursor: pointer;
+  background-color: grey;
+}
+.u1 {
+  text-align: center;
+  width: 10vw;
+  height: 0;
+  visibility: hidden;
+  display: absolute;
+  margin-left: 20vw;
+  margin-top: -50px;
+}
+.n1 {
+  visibility: hidden;
+  color: white;
+  background-color: darkgrey;
+}
+.u0:hover .act1:hover .u1 .n1 {
+  visibility: visible;
+}
+.u0:hover .act1:hover .u1 {
+  height: auto;
+}
+.u1:hover .n1:hover {
+  cursor: pointer;
+  background-color: grey;
+}
+.u2 {
+  text-align: center;
+  width: 10vw;
+  height: 0;
+  visibility: hidden;
+  display: absolute;
+  margin-left: 10vw;
+  margin-top: -50px;
+}
+.n2 {
+  visibility: hidden;
+  color: white;
+  background-color: darkgrey;
+}
+.u0:hover .act2:hover .u2 .n2 {
+  visibility: visible;
+}
+.u0:hover .act2:hover .u2 {
+  height: auto;
+}
+.u2:hover .n2:hover {
+  cursor: pointer;
+  background-color: grey;
+}
