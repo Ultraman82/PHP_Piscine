@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="row">
+      <div
+        id="balloon"
+        4
+        class="balloon"
+        style="
+        width: 200px;
+        height: 200px;        
+        justify-content: center;
+        align-content: center;
+        background-color: red;
+        border-radius: 50%;
+        display: inline-block;"
+      ></div>
+    </div>
+
+    <script>
+      $(document).ready(function() {
+        $("#balloon").click(function() {
+          console.log(parseInt(this.style.width));
+          var width = parseInt(this.style.width);
+          var color = this.style.backgroundColor;
+          if (color === "red") this.style.backgroundColor = "green";
+          else if (color === "green") this.style.backgroundColor = "blue";
+          else this.style.backgroundColor = "red";
+
+          if (width > 410) width = 190;
+          else {
+            this.style.width = width + 10 + "px";
+            this.style.height = width + 10 + "px";
+          }
+        });
+        $("#balloon").mouseleave(function() {
+          var width = parseInt(this.style.width);
+          console.log(width);
+          if (width < 205) width = 205;
+          this.style.width = width - 5 + "px";
+          this.style.height = width - 5 + "px";
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form onsubmit="myFunction()">
+      <label>Input: </label>
+      <input id="nb1" type="text" name="nb1" />
+      <select id="operat" name="operat">
+        <option value="+" selected>+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+      </select>
+      <input id="nb2" type="text" name="nb2" />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <script>
+      function myFunction() {
+        var nb1 = document.getElementById("nb1").value;
+        var op = document.getElementById("operat").value;
+        var nb2 = document.getElementById("nb2").value;
+        alert(eval(`${nb1} ${op} ${nb2}`));
+      }
+    </script>
+  </body>
+</html>

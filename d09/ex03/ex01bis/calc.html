@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <form id="form">
+      <label>Input: </label>
+      <input id="nb1" type="text" name="nb1" />
+      <select id="operat" name="operat">
+        <option value="+" selected>+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+      </select>
+      <input id="nb2" type="text" name="nb2" />
+      <input type="submit" value="Submit" />
+    </form>
+    <script>
+      $("#form").submit(function() {
+        var nb1 = $("#nb1").val();
+        var op = $("#operat").val();
+        var nb2 = $("#nb2").val();
+        alert(eval(`${nb1} ${op} ${nb2}`));
+      });
+    </script>
+  </body>
+</html>

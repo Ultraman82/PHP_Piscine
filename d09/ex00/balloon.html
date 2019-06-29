@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <style>
+    /* #balloon {
+            height: 200px;
+            width: 200px;
+            justify-content: center;
+            align-content: center;
+            background-color: black;
+            border-radius: 50%;
+            display: inline-block;
+        }         */
+  </style>
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> -->
+  <body>
+    <div class="row">
+      <div
+        id="balloon"
+        class="balloon"
+        onmouseleave="mouseLeave()"
+        onclick="change();"
+        style="
+        height: 200px;
+        width: 200px;
+        justify-content: center;
+        align-content: center;
+        background-color: red;
+        border-radius: 50%;
+        display: inline-block;"
+      ></div>
+    </div>
+
+    <script>
+      function mouseLeave() {
+        var width = parseInt(document.getElementById("balloon").style.width);
+        if (width < 205) width = 205;
+        document.getElementById("balloon").style.width = width - 5 + "px";
+        document.getElementById("balloon").style.height = width - 5 + "px";
+      }
+
+      function change() {
+        var width = parseInt(document.getElementById("balloon").style.width);
+        var color = document.getElementById("balloon").style.backgroundColor;
+        if (color === "red")
+          document.getElementById("balloon").style.backgroundColor = "green";
+        else if (color === "green")
+          document.getElementById("balloon").style.backgroundColor = "blue";
+        else document.getElementById("balloon").style.backgroundColor = "red";
+
+        if (width > 410) width = 190;
+        document.getElementById("balloon").style.width = width + 10 + "px";
+        document.getElementById("balloon").style.height = width + 10 + "px";
+      }
+    </script>
+  </body>
+</html>

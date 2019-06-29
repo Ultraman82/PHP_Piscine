@@ -1,0 +1,16 @@
+{
+  "folders": [
+    {
+      "path": "/nfs/2018/c/chjeong/Desktop/Flask_Heroku"
+    },
+    {
+      "path": "/nfs/2018/c/chjeong/Desktop/ecomerce"
+    },
+    {
+      "path": "/nfs/2018/c/chjeong/Desktop/flask-server"
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "d09"
+  }
+}
